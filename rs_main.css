@@ -10,4 +10,41 @@
 
 /* html styles */
 /* The html styles hold style rules for the html element. The style rules set the background for the page. */
-html {}
+html {
+    background: linear-gradient(rgb(74, 74, 255), black);
+    height: 100%;
+
+}
+
+/* Header styles */
+nav,
+ul {
+    width: 100%;
+    display: block;
+    float: left;
+}
+
+header>nav>ul>li {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+
+
+/* Body Styles */
+body {
+    height: 100%;
+    background-color: rgba(191, 190, 188, 0.9);
+    width: 90%;
+    margin: 0px auto;
+    box-shadow: 8px 6px 8px rgb(31, 31, 31), -8px 6px 8px rgb(31, 31, 31);
+}
+
+body article {
+    margin: 10px 18px;
+}
+
+h2 {
+    clear: both;
+}
