@@ -13,47 +13,16 @@
 html {
     background: linear-gradient(rgb(103, 103, 252), black);
     height: 100%;
-
 }
 
 /* Header styles */
-/* nav {
-    background-color: rgb(18, 57, 105);
-    margin: 5px auto;
-    height: 40px;
-
-}
-
-nav,
-ul {
-    display: block;
-    text-align: center;
-    float: left;
-    height: 40px;
-}
-
-header nav ul li {
-    display: inline;
-    width: 25%;
-    float: left;
-    text-align: center;
-    height: 20px;
-    vertical-align: middle;
-
-}
-
-header nav ul li a {
-    display: block;
-    vertical-align: middle;
-    color: whitesmoke;
-} */
-nav {
+nav.flat {
     margin: 10px 0px;
     display: table;
     width: 100%;
 }
 
-ul {
+nav.flat ul {
     display: table-row;
     list-style-type: none;
     margin: 0;
@@ -62,13 +31,13 @@ ul {
     background-color: rgb(18, 57, 105);
 }
 
-li {
+nav.flat li {
     display: table-cell;
     float: right;
     text-align: center;
 }
 
-li a {
+nav.flat li a {
     width: 100%;
     display: table-cell;
     color: white;
@@ -77,13 +46,14 @@ li a {
     text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: #111;
+nav.flat li a:hover {
+    background-color: rgb(9, 28, 52);
 }
 
 /* Body Styles */
 body {
+
+    position: relative;
     height: 100%;
     background-color: rgba(191, 190, 188, 0.9);
     width: 90%;
@@ -96,7 +66,6 @@ body article {
 }
 
 article#about {
-    height: 81.2%;
     padding: 10px 20px;
 }
 
@@ -123,9 +92,7 @@ aside#extras {
     border-radius: 25px;
 }
 
-article#skills {
-    height: 80.2%;
-}
+article#skills {}
 
 
 
@@ -161,12 +128,14 @@ dt {
 }
 
 footer {
+    width: 100%;
     background-color: rgb(104, 103, 103);
     color: whitesmoke;
     text-align: center;
-    display: block;
-    height: 4.6%;
-    clear: both;
+    vertical-align: middle;
+    position: absolute;
+    bottom: 0;
+    height: 40px;
 }
 
 nav::before {
@@ -175,6 +144,32 @@ nav::before {
     clear: both;
 }
 
-/* @media only screen (max-width: 460px) {
+@media only screen and (max-width: 460px) {
+    nav.flat {
+        display: flex;
+        flex: 1 1 20px;
+    }
 
-} */
+    body {
+        width: 100%;
+    }
+
+    article {
+        font-size: .88em
+    }
+
+    h3#lack,
+    aside#extras {
+        display: none;
+    }
+
+    article#schools {
+        margin: 5px;
+        width: 90%;
+
+    }
+
+    img.img {
+        display: none;
+    }
+}
