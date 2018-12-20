@@ -16,10 +16,12 @@ html {
 }
 
 /* Header styles */
+/* The header styles adjust styles for the nav. The styles include rules that adjust the spacing, color, and overall look of the elements affected. */
 nav.flat {
     margin: 10px 0px;
     display: table;
     width: 100%;
+    height: 20px;
 }
 
 nav.flat ul {
@@ -51,6 +53,7 @@ nav.flat li a:hover {
 }
 
 /* Body Styles */
+/* The body styles adjust styles for the body elements. The styles include rules that adjust the spacing, color, and overall look of the elements affected. */
 body {
 
     position: relative;
@@ -80,6 +83,19 @@ article#working {
     height: 80.2%;
 }
 
+article#skills {}
+
+article#flex {
+    display: flex;
+    position: relative;
+}
+
+p.flexitm {
+    position: relative;
+    flex-shrink: 1 1 50%;
+    width: 50%;
+}
+
 aside#extras {
     width: 22%;
     float: right;
@@ -92,7 +108,7 @@ aside#extras {
     border-radius: 25px;
 }
 
-article#skills {}
+
 
 
 
@@ -121,7 +137,7 @@ dt {
     padding: 8px;
     margin: 10px;
     background-color: rgb(94, 94, 162);
-    width: 13%;
+    width: 30%;
     border: 2px solid rgb(21, 21, 92);
     border-radius: 28px;
     color: whitesmoke;
@@ -144,10 +160,56 @@ nav::before {
     clear: both;
 }
 
+img#portrait {
+    border: 1px outset rgb(245, 163, 80);
+    display: block;
+    margin: 0px auto;
+    box-shadow: 5px 5px 10px;
+}
+
+/* Media styles */
+/* The media styles adjust styles for the different viewports. The styles include rules that adjust the spacing, color, and overall look of the elements affected. When a viewport apllies to the media rule it apllies the rules in that media rule to the elements. */
+@media only screen and (max-width: 630px) {
+    dt {
+        display: none;
+    }
+
+    dd {
+        padding: 3px;
+    }
+}
+
+@media only screen and (max-width: 514px) {
+    nav.flat {
+        height: 40px;
+    }
+
+    nav.flat ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav.flat a {
+        width: 100%;
+    }
+
+    dd {
+        padding: 3px;
+    }
+}
+
 @media only screen and (max-width: 460px) {
     nav.flat {
-        display: flex;
-        flex: 1 1 20px;
+        height: 40px;
+    }
+
+    nav.flat ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav.flat a {
+        width: 100%;
     }
 
     body {
@@ -169,7 +231,14 @@ nav::before {
 
     }
 
-    img.img {
-        display: none;
+    article#about {
+        padding: 5px;
+        margin: 0px auto 0px auto;
     }
+
+    article#skills {
+        max-height: 737px;
+        scroll-behavior: auto
+    }
+
 }
